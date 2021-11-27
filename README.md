@@ -7,7 +7,7 @@ just follow the below steps:
 1. Clone this repository
 
 ```sh
-git clone https://github.com/Mh-Fahim/Modern-Landing-Page.git
+git clone https://github.com/Mh-Fahim/Facebook-Ul.git
 ```
 
 To run the project follow the below steps:
