@@ -1,0 +1,3785 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook UI</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gray-100 dark:bg-dark-main">
+    <!-- #nav start -->
+    <nav
+      class="
+        flex flex-col
+        md:flex-row
+        items-center
+        justify-center
+        md:justify-between
+        bg-white
+        pt-2
+        px-2
+        md:pt-0
+        fixed
+        top-0
+        z-10
+        w-full
+        shadow-md
+      "
+    >
+      <!-- nav-left -->
+      <div
+        class="
+          flex
+          items-center
+          justify-between
+          w-full
+          md:w-max md:gap-2
+          mb-1
+          md:mb-0 md:mx-0
+        "
+      >
+        <a href="#" class="hidden md:block"
+          ><img
+            src="assets/facebook-logo.png"
+            alt="facebook-logo"
+            class="w-7 h-7"
+        /></a>
+        <a href="#" class="md:hidden"
+          ><img
+            src="assets/sm-facebook-logo (1).png"
+            alt="facebook-logo"
+            class="w-24"
+        /></a>
+        <ul class="flex gap-1">
+          <li
+            class="
+              flex
+              items-center
+              justify-between
+              gap-1
+              rounded-full
+              sm:bg-gray-100
+              hover:bg-gray-200
+              py-1.5
+              px-2
+              xl:w-44
+            "
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 text-gray-600"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+            <input
+              type="text"
+              placeholder="Facebook Search"
+              class="
+                w-full
+                hidden
+                xl:block
+                px-1
+                outline-none
+                bg-transparent
+                placeholder-gray-500
+                focus:placeholder-gray-400
+                text-gray-600
+                cursor-pointer
+                md:cursor-auto
+              "
+            />
+          </li>
+          <li
+            class="p-2 hover:bg-gray-200 rounded-full md:hidden cursor-pointer"
+          >
+            <a href="#">
+              <svg
+                viewBox="0 0 28 28"
+                alt=""
+                class="a8c37x1j ms05siws hwsy1cff b7h9ocf4 fzdkajry w-6 h-6"
+              >
+                <path
+                  d="M14 2.042c6.76 0 12 4.952 12 11.64S20.76 25.322 14 25.322a13.091 13.091 0 0 1-3.474-.461.956 .956 0 0 0-.641.047L7.5 25.959a.961.961 0 0 1-1.348-.849l-.065-2.134a.957.957 0 0 0-.322-.684A11.389 11.389 0 0 1 2 13.682C2 6.994 7.24 2.042 14 2.042ZM6.794 17.086a.57.57 0 0 0 .827.758l3.786-2.874a.722.722 0 0 1 .868 0l2.8 2.1a1.8 1.8 0 0 0 2.6-.481l3.525-5.592a.57.57 0 0 0-.827-.758l-3.786 2.874a.722.722 0 0 1-.868 0l-2.8-2.1a1.8 1.8 0 0 0-2.6.481Z"
+                ></path>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- nav-center -->
+      <ul
+        class="
+          flex
+          items-center
+          justify-between
+          md:justify-center
+          w-full
+          md:w-max
+          sm:gap-2
+          lg:gap-4
+        "
+      >
+        <li
+          class="
+            px-2
+            sm:px-6
+            lg:px-10
+            py-2
+            border-b-4 border-blue-600
+            cursor-pointer
+          "
+        >
+          <a href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-6 h-6 sm:h-7 sm:w-7"
+              viewBox="0 0 20 20"
+              fill="blue"
+            >
+              <path
+                d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
+              />
+            </svg>
+          </a>
+        </li>
+        <li
+          class="
+            px-2
+            sm:px-6
+            lg:px-10
+            py-2
+            hover:bg-gray-100
+            rounded-md
+            cursor-pointer
+          "
+        >
+          <a href="#">
+            <svg
+              viewBox="0 0 28 28"
+              class="
+                a8c37x1j
+                ms05siws
+                hwsy1cff
+                b7h9ocf4
+                em6zcovv
+                w-6
+                h-6
+                sm:w-7 sm:h-7
+              "
+            >
+              <path
+                d="M8.75 25.25C8.336 25.25 8 24.914 8 24.5 8 24.086 8.336 23.75 8.75 23.75L19.25 23.75C19.664 23.75 20 24.086 20 24.5 20 24.914 19.664 25.25 19.25 25.25L8.75 25.25ZM17.163 12.846 12.055 15.923C11.591 16.202 11 15.869 11 15.327L11 9.172C11 8.631 11.591 8.297 12.055 8.576L17.163 11.654C17.612 11.924 17.612 12.575 17.163 12.846ZM21.75 20.25C22.992 20.25 24 19.242 24 18L24 6.5C24 5.258 22.992 4.25 21.75 4.25L6.25 4.25C5.008 4.25 4 5.258 4 6.5L4 18C4 19.242 5.008 20.25 6.25 20.25L21.75 20.25ZM21.75 21.75 6.25 21.75C4.179 21.75 2.5 20.071 2.5 18L2.5 6.5C2.5 4.429 4.179 2.75 6.25 2.75L21.75 2.75C23.821 2.75 25.5 4.429 25.5 6.5L25.5 18C25.5 20.071 23.821 21.75 21.75 21.75Z"
+              ></path>
+            </svg>
+          </a>
+        </li>
+        <li
+          class="
+            px-2
+            sm:px-6
+            lg:px-10
+            py-2
+            hover:bg-gray-100
+            rounded-md
+            cursor-pointer
+          "
+        >
+          <a href="#">
+            <svg
+              viewBox="0 0 28 28"
+              class="
+                a8c37x1j
+                ms05siws
+                hwsy1cff
+                b7h9ocf4
+                em6zcovv
+                w-6
+                h-6
+                sm:w-7 sm:h-7
+              "
+            >
+              <path
+                d="M17.5 23.75 21.75 23.75C22.164 23.75 22.5 23.414 22.5 23L22.5 14 22.531 14C22.364 13.917 22.206 13.815 22.061 13.694L21.66 13.359C21.567 13.283 21.433 13.283 21.34 13.36L21.176 13.497C20.591 13.983 19.855 14.25 19.095 14.25L18.869 14.25C18.114 14.25 17.382 13.987 16.8 13.506L16.616 13.354C16.523 13.278 16.39 13.278 16.298 13.354L16.113 13.507C15.53 13.987 14.798 14.25 14.044 14.25L13.907 14.25C13.162 14.25 12.439 13.994 11.861 13.525L11.645 13.35C11.552 13.275 11.419 13.276 11.328 13.352L11.155 13.497C10.57 13.984 9.834 14.25 9.074 14.25L8.896 14.25C8.143 14.25 7.414 13.989 6.832 13.511L6.638 13.351C6.545 13.275 6.413 13.275 6.32 13.351L5.849 13.739C5.726 13.84 5.592 13.928 5.452 14L5.5 14 5.5 23C5.5 23.414 5.836 23.75 6.25 23.75L10.5 23.75 10.5 17.5C10.5 16.81 11.06 16.25 11.75 16.25L16.25 16.25C16.94 16.25 17.5 16.81 17.5 17.5L17.5 23.75ZM3.673 8.75 24.327 8.75C24.3 8.66 24.271 8.571 24.238 8.483L23.087 5.355C22.823 4.688 22.178 4.25 21.461 4.25L6.54 4.25C5.822 4.25 5.177 4.688 4.919 5.338L3.762 8.483C3.729 8.571 3.7 8.66 3.673 8.75ZM24.5 10.25 3.5 10.25 3.5 12C3.5 12.414 3.836 12.75 4.25 12.75L4.421 12.75C4.595 12.75 4.763 12.69 4.897 12.58L5.368 12.193C6.013 11.662 6.945 11.662 7.59 12.193L7.784 12.352C8.097 12.609 8.49 12.75 8.896 12.75L9.074 12.75C9.483 12.75 9.88 12.607 10.194 12.345L10.368 12.2C11.01 11.665 11.941 11.659 12.589 12.185L12.805 12.359C13.117 12.612 13.506 12.75 13.907 12.75L14.044 12.75C14.45 12.75 14.844 12.608 15.158 12.35L15.343 12.197C15.989 11.663 16.924 11.663 17.571 12.197L17.755 12.35C18.068 12.608 18.462 12.75 18.869 12.75L19.095 12.75C19.504 12.75 19.901 12.606 20.216 12.344L20.38 12.208C21.028 11.666 21.972 11.666 22.62 12.207L23.022 12.542C23.183 12.676 23.387 12.75 23.598 12.75 24.097 12.75 24.5 12.347 24.5 11.85L24.5 10.25ZM24 14.217 24 23C24 24.243 22.993 25.25 21.75 25.25L6.25 25.25C5.007 25.25 4 24.243 4 23L4 14.236C2.875 14.112 2 13.158 2 12L2 9.951C2 9.272 2.12 8.6 2.354 7.964L3.518 4.802C4.01 3.563 5.207 2.75 6.54 2.75L21.461 2.75C22.793 2.75 23.99 3.563 24.488 4.819L25.646 7.964C25.88 8.6 26 9.272 26 9.951L26 11.85C26 13.039 25.135 14.026 24 14.217ZM16 23.75 16 17.75 12 17.75 12 23.75 16 23.75Z"
+              ></path>
+            </svg>
+          </a>
+        </li>
+        <li
+          class="
+            px-2
+            sm:px-6
+            lg:px-10
+            py-2
+            hover:bg-gray-100
+            rounded-md
+            cursor-pointer
+            hidden
+            md:block
+          "
+        >
+          <a href="#">
+            <svg
+              viewBox="0 0 28 28"
+              class="
+                a8c37x1j
+                ms05siws
+                hwsy1cff
+                b7h9ocf4
+                em6zcovv
+                w-6
+                h-6
+                sm:w-7 sm:h-7
+              "
+            >
+              <path
+                d="M25.5 14C25.5 7.649 20.351 2.5 14 2.5 7.649 2.5 2.5 7.649 2.5 14 2.5 20.351 7.649 25.5 14 25.5 20.351 25.5 25.5 20.351 25.5 14ZM27 14C27 21.18 21.18 27 14 27 6.82 27 1 21.18 1 14 1 6.82 6.82 1 14 1 21.18 1 27 6.82 27 14ZM7.479 14 7.631 14C7.933 14 8.102 14.338 7.934 14.591 7.334 15.491 6.983 16.568 6.983 17.724L6.983 18.221C6.983 18.342 6.99 18.461 7.004 18.578 7.03 18.802 6.862 19 6.637 19L6.123 19C5.228 19 4.5 18.25 4.5 17.327 4.5 15.492 5.727 14 7.479 14ZM20.521 14C22.274 14 23.5 15.492 23.5 17.327 23.5 18.25 22.772 19 21.878 19L21.364 19C21.139 19 20.97 18.802 20.997 18.578 21.01 18.461 21.017 18.342 21.017 18.221L21.017 17.724C21.017 16.568 20.667 15.491 20.067 14.591 19.899 14.338 20.067 14 20.369 14L20.521 14ZM8.25 13C7.147 13 6.25 11.991 6.25 10.75 6.25 9.384 7.035 8.5 8.25 8.5 9.465 8.5 10.25 9.384 10.25 10.75 10.25 11.991 9.353 13 8.25 13ZM19.75 13C18.647 13 17.75 11.991 17.75 10.75 17.75 9.384 18.535 8.5 19.75 8.5 20.965 8.5 21.75 9.384 21.75 10.75 21.75 11.991 20.853 13 19.75 13ZM15.172 13.5C17.558 13.5 19.5 15.395 19.5 17.724L19.5 18.221C19.5 19.202 18.683 20 17.677 20L10.323 20C9.317 20 8.5 19.202 8.5 18.221L8.5 17.724C8.5 15.395 10.441 13.5 12.828 13.5L15.172 13.5ZM16.75 9C16.75 10.655 15.517 12 14 12 12.484 12 11.25 10.655 11.25 9 11.25 7.15 12.304 6 14 6 15.697 6 16.75 7.15 16.75 9Z"
+              ></path>
+            </svg>
+          </a>
+        </li>
+        <li
+          class="
+            px-2
+            sm:px-6
+            lg:px-10
+            py-2
+            hover:bg-gray-200
+            rounded-md
+            cursor-pointer
+            md:hidden
+          "
+        >
+          <a href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-6 h-6 sm:h-7 sm:w-7 text-gray-700"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+              />
+            </svg>
+          </a>
+        </li>
+        <li
+          class="
+            px-2
+            sm:px-6
+            lg:px-10
+            py-2
+            hover:bg-gray-100
+            rounded-md
+            cursor-pointer
+            hidden
+            xl:block
+          "
+        >
+          <a href="#">
+            <svg
+              viewBox="0 0 28 28"
+              class="
+                a8c37x1j
+                ms05siws
+                hwsy1cff
+                b7h9ocf4
+                em6zcovv
+                w-6
+                h-6
+                sm:h-7 sm:w-7
+              "
+            >
+              <path
+                d="M23.5 9.5H10.25a.75.75 0 00-.75.75v7c0 .414.336.75.75.75H17v5.5H4.5v-19h19v5zm0 14h-5v-6.25a.75.75 0 00-.75-.75H11V11h12.5v12.5zm1.5.25V4.25C25 3.561 24.439 3 23.75 3H4.25C3.561 3 3 3.561 3 4.25v19.5c0 .689.561 1.25 1.25 1.25h19.5c.689 0 1.25-.561 1.25-1.25z"
+              ></path>
+            </svg>
+          </a>
+        </li>
+        <li
+          class="
+            px-2
+            sm:px-6
+            lg:px-10
+            py-2
+            hover:bg-gray-100
+            rounded-md
+            cursor-pointer
+            xl:hidden
+          "
+        >
+          <a href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-6 h-6 sm:h-7 sm:w-7"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+      <!-- nav-right -->
+      <ul class="flex items-center gap-2">
+        <li class="hidden lg:block cursor-pointer">
+          <a
+            href="#"
+            class="
+              flex
+              gap-2
+              px-2
+              py-1.5
+              font-semibold
+              hover:bg-gray-200
+              justify-between
+              rounded-full
+            "
+          >
+            <img
+              src="assets/mh.jpg"
+              alt="profile-picture"
+              class="w-6 h-6 rounded-full object-cover"
+            />
+            <span>Mh</span>
+          </a>
+        </li>
+        <li
+          class="
+            p-2
+            hover:bg-gray-200
+            rounded-full
+            hidden
+            md:block
+            cursor-pointer
+          "
+        >
+          <a href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+              />
+            </svg>
+          </a>
+        </li>
+        <li
+          class="
+            p-2
+            hover:bg-gray-200
+            rounded-full
+            hidden
+            md:block
+            cursor-pointer
+          "
+        >
+          <a href="#">
+            <svg
+              viewBox="0 0 28 28"
+              alt=""
+              class="a8c37x1j ms05siws hwsy1cff b7h9ocf4 fzdkajry w-5 h-5"
+            >
+              <path
+                d="M14 2.042c6.76 0 12 4.952 12 11.64S20.76 25.322 14 25.322a13.091 13.091 0 0 1-3.474-.461.956 .956 0 0 0-.641.047L7.5 25.959a.961.961 0 0 1-1.348-.849l-.065-2.134a.957.957 0 0 0-.322-.684A11.389 11.389 0 0 1 2 13.682C2 6.994 7.24 2.042 14 2.042ZM6.794 17.086a.57.57 0 0 0 .827.758l3.786-2.874a.722.722 0 0 1 .868 0l2.8 2.1a1.8 1.8 0 0 0 2.6-.481l3.525-5.592a.57.57 0 0 0-.827-.758l-3.786 2.874a.722.722 0 0 1-.868 0l-2.8-2.1a1.8 1.8 0 0 0-2.6.481Z"
+              ></path>
+            </svg>
+          </a>
+        </li>
+        <li
+          class="
+            p-2
+            hover:bg-gray-200
+            rounded-full
+            hidden
+            md:block
+            cursor-pointer
+          "
+        >
+          <a href="#">
+            <svg
+              viewBox="0 0 28 28"
+              alt=""
+              class="a8c37x1j ms05siws hwsy1cff b7h9ocf4 fzdkajry w-5 h-5"
+            >
+              <path
+                d="M7.847 23.488C9.207 23.488 11.443 23.363 14.467 22.806 13.944 24.228 12.581 25.247 10.98 25.247 9.649 25.247 8.483 24.542 7.825 23.488L7.847 23.488ZM24.923 15.73C25.17 17.002 24.278 18.127 22.27 19.076 21.17 19.595 18.724 20.583 14.684 21.369 11.568 21.974 9.285 22.113 7.848 22.113 7.421 22.113 7.068 22.101 6.79 22.085 4.574 21.958 3.324 21.248 3.077 19.976 2.702 18.049 3.295 17.305 4.278 16.073L4.537 15.748C5.2 14.907 5.459 14.081 5.035 11.902 4.086 7.022 6.284 3.687 11.064 2.753 15.846 1.83 19.134 4.096 20.083 8.977 20.506 11.156 21.056 11.824 21.986 12.355L21.986 12.356 22.348 12.561C23.72 13.335 24.548 13.802 24.923 15.73Z"
+              ></path>
+            </svg>
+          </a>
+        </li>
+        <li
+          class="
+            p-2
+            hover:bg-gray-200
+            rounded-full
+            hidden
+            md:block
+            cursor-pointer
+          "
+        >
+          <a href="#">
+            <svg
+              viewBox="0 0 20 20"
+              width="1em"
+              height="1em"
+              class="
+                a8c37x1j
+                ms05siws
+                hwsy1cff
+                b7h9ocf4
+                fzdkajry
+                jnigpg78
+                odw8uiq3
+                h-5
+                w-5
+              "
+            >
+              <path
+                d="M10 14a1 1 0 0 1-.755-.349L5.329 9.182a1.367 1.367 0 0 1-.205-1.46A1.184 1.184 0 0 1 6.2 7h7.6a1.18 1.18 0 0 1 1.074.721 1.357 1.357 0 0 1-.2 1.457l-3.918 4.473A1 1 0 0 1 10 14z"
+              ></path>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- nav-end -->
+    <!-- main-start -->
+    <div class="flex lg:justify-between xl:justify-center h-screen">
+      <!-- main-left -->
+      <div class="w-1/5 h-full hidden xl:flex flex-col fixed top-0 left-0">
+        <ul
+          class="
+            flex flex-col
+            lg:pt-14 lg:pb-2
+            xl:mt-12 xl:pt-4
+            overflow-y-auto
+          "
+        >
+          <li>
+            <a
+              href="#"
+              class="
+                flex
+                items-center
+                gap-2
+                p-2
+                cursor-pointer
+                rounded-md
+                hover:bg-gray-200
+                mx-1
+              "
+            >
+              <img
+                src="assets/mh.jpg"
+                alt="profile-image"
+                class="rounded-full w-7 h-7 object-cover"
+              />
+              <span class="font-semibold text-gray-800">Mh Fahim</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="
+                flex
+                items-center
+                gap-2
+                p-2
+                cursor-pointer
+                rounded-md
+                hover:bg-gray-200
+                mx-1
+              "
+            >
+              <img
+                src="assets/friends.png"
+                alt="profile-image"
+                class="rounded-full w-7 h-7"
+              />
+              <span class="font-semibold text-gray-800">Friends</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="
+                flex
+                items-center
+                gap-2
+                p-2
+                cursor-pointer
+                rounded-md
+                hover:bg-gray-200
+                mx-1
+              "
+            >
+              <img
+                src="assets/watch.png"
+                alt="profile-image"
+                class="rounded-full w-7 h-7"
+              />
+              <span class="font-semibold text-gray-800">Watch</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="
+                flex
+                items-center
+                gap-2
+                p-2
+                cursor-pointer
+                rounded-md
+                hover:bg-gray-200
+                mx-1
+              "
+            >
+              <img
+                src="assets/groups.png"
+                alt="profile-image"
+                class="rounded-full w-7 h-7"
+              />
+              <span class="font-semibold text-gray-800">Groups</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="
+                flex
+                items-center
+                gap-2
+                p-2
+                cursor-pointer
+                rounded-md
+                hover:bg-gray-200
+                mx-1
+              "
+            >
+              <img
+                src="assets/marketplace.png"
+                alt="profile-image"
+                class="rounded-full w-7 h-7"
+              />
+              <span class="font-semibold text-gray-800">Marketplace</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="
+                flex
+                items-center
+                gap-2
+                p-2
+                cursor-pointer
+                rounded-md
+                hover:bg-gray-200
+                mx-1
+              "
+            >
+              <img
+                src="assets/memories.png"
+                alt="profile-image"
+                class="rounded-full w-7 h-7"
+              />
+              <span class="font-semibold text-gray-800">Memories</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="
+                flex
+                items-center
+                gap-2
+                p-2
+                cursor-pointer
+                rounded-md
+                hover:bg-gray-200
+                mx-1
+              "
+            >
+              <img
+                src="assets/saved.png"
+                alt="profile-image"
+                class="rounded-full w-7 h-7"
+              />
+              <span class="font-semibold text-gray-800">Saved</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="
+                flex
+                items-center
+                gap-2
+                p-2
+                cursor-pointer
+                rounded-md
+                hover:bg-gray-200
+                mx-1
+              "
+            >
+              <img
+                src="assets/pages.png"
+                alt="profile-image"
+                class="rounded-full w-7 h-7"
+              />
+              <span class="font-semibold text-gray-800">Pages</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="
+                flex
+                items-center
+                gap-2
+                p-2
+                cursor-pointer
+                rounded-md
+                hover:bg-gray-200
+                mx-1
+              "
+            >
+              <img
+                src="assets/events.png"
+                alt="profile-image"
+                class="rounded-full w-7 h-7"
+              />
+              <span class="font-semibold text-gray-800">Events</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="
+                flex
+                items-center
+                gap-2
+                p-2
+                cursor-pointer
+                rounded-md
+                hover:bg-gray-200
+                mx-1
+              "
+            >
+              <div class="rounded-full bg-gray-300 p-1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 text-gray-700"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="3"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </div>
+              <span class="font-semibold text-gray-800">Saved</span>
+            </a>
+          </li>
+          <hr class="mx-3 mt-4 mb-3" />
+          <li>
+            <span class="font-semibold text-gray-800 p-2 mb-2"
+              >Your Shortcuts</span
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="
+                flex
+                items-center
+                gap-2
+                p-2
+                mt-2
+                mx-1
+                cursor-pointer
+                rounded-md
+                hover:bg-gray-200
+              "
+            >
+              <img
+                src="assets/fashion.png"
+                alt="profile-image"
+                class="rounded-full w-7 h-7"
+              />
+              <span class="font-semibold text-gray-800">Fashion</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="
+                flex
+                items-center
+                gap-2
+                p-2
+                mx-1
+                cursor-pointer
+                rounded-md
+                hover:bg-gray-200
+              "
+            >
+              <img
+                src="assets/teenpatti.png"
+                alt="profile-image"
+                class="rounded-full w-7 h-7"
+              />
+              <span class="font-semibold text-gray-800">Teen Patti Gold</span>
+            </a>
+          </li>
+          <li class="px-2 text-sm mt-2 text-gray-600">
+            Privacy Terms Advertising Ad Choices Cookies More Meta &copy; 2021
+          </li>
+        </ul>
+      </div>
+      <!-- main-center -->
+      <div class="w-full h-full lg:w-3/4 xl:w-1/2 pt-28 md:pt-16 px-2">
+        <div class="container flex flex-col items-center h-full mx-auto">
+          <!-- story section -->
+          <div class="relative flex space-x-2 items-center">
+            <!-- story-#1 -->
+            <div
+              class="
+                flex flex-col
+                overflow-hidden
+                h-44
+                sm:w-28
+                w-24
+                shadow
+                cursor-pointer
+                rounded-xl
+                bg-green-400
+              "
+            >
+              <div class="flex flex-col justify-between h-full">
+                <div class="relative">
+                  <img
+                    src="assets/mh.jpg"
+                    alt=""
+                    class="w-full h-32 object-cover"
+                  />
+                  <div
+                    class="
+                      absolute
+                      -bottom-3
+                      ring-2 ring-white
+                      p-2
+                      sm:inset-x-10
+                      left-8
+                      rounded-full
+                      bg-blue-600
+                    "
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-4 w-4 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 4v16m8-8H4"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="
+                    bg-white
+                    text-gray-700
+                    h-12
+                    pt-4
+                    text-center text-sm
+                    sm:text-base
+                    font-semibold
+                  "
+                >
+                  <span>Create Story</span>
+                </div>
+              </div>
+            </div>
+            <!-- story-#2 -->
+            <div
+              class="
+                relative
+                overflow-hidden
+                h-44
+                sm:w-28
+                w-24
+                shadow
+                cursor-pointer
+                rounded-xl
+                bg-green-400
+              "
+            >
+              <div class="w-full h-full">
+                <img
+                  src="assets/story-1.jpg"
+                  alt="story-image"
+                  class="h-full w-full"
+                />
+                <div
+                  class="
+                    absolute
+                    top-3
+                    left-3
+                    w-9
+                    h-9
+                    rounded-full
+                    cursor-pointer
+                    ring-4 ring-blue-600
+                  "
+                >
+                  <img
+                    src="assets/story-p-1.jpg"
+                    alt="profile-image"
+                    class="rounded-full"
+                  />
+                </div>
+                <div
+                  class="
+                    absolute
+                    bottom-1
+                    left-2
+                    text-white text-sm
+                    sm:text-base
+                    font-semibold
+                  "
+                >
+                  <span>Sazzadur Rahman</span>
+                </div>
+              </div>
+            </div>
+            <!-- story-#3 -->
+            <div
+              class="
+                relative
+                overflow-hidden
+                h-44
+                sm:w-28
+                w-24
+                shadow
+                cursor-pointer
+                rounded-xl
+                bg-green-400
+              "
+            >
+              <div class="w-full h-full">
+                <img
+                  src="assets/story-2.jpg"
+                  alt="story-image"
+                  class="h-full w-full"
+                />
+                <div
+                  class="
+                    absolute
+                    top-3
+                    left-3
+                    w-9
+                    h-9
+                    rounded-full
+                    cursor-pointer
+                    ring-4 ring-blue-600
+                  "
+                >
+                  <img
+                    src="assets/story-p-2.jpg"
+                    alt="profile-image"
+                    class="rounded-full"
+                  />
+                </div>
+                <div
+                  class="
+                    absolute
+                    bottom-1
+                    left-2
+                    text-white text-sm
+                    sm:text-base
+                    font-semibold
+                  "
+                >
+                  <span>Sajid Chowdury</span>
+                </div>
+              </div>
+            </div>
+            <!-- story-#4 -->
+            <div
+              class="
+                relative
+                overflow-hidden
+                h-44
+                sm:w-28
+                w-24
+                shadow
+                cursor-pointer
+                rounded-xl
+                bg-green-400
+                hidden
+                sm:block
+              "
+            >
+              <div class="w-full h-full">
+                <img
+                  src="assets/story-3.jpg"
+                  alt="story-image"
+                  class="h-full w-full"
+                />
+                <div
+                  class="
+                    absolute
+                    top-3
+                    left-3
+                    w-9
+                    h-9
+                    rounded-full
+                    cursor-pointer
+                    ring-4 ring-blue-600
+                  "
+                >
+                  <img
+                    src="assets/story-p-3.jpg"
+                    alt="profile-image"
+                    class="rounded-full"
+                  />
+                </div>
+                <div
+                  class="
+                    absolute
+                    bottom-1
+                    left-2
+                    text-white text-sm
+                    sm:text-base
+                    font-semibold
+                  "
+                >
+                  <span>Ab . Ahmed Akash</span>
+                </div>
+              </div>
+            </div>
+            <!-- story-#5 -->
+            <div
+              class="
+                relative
+                overflow-hidden
+                h-44
+                sm:w-28
+                w-24
+                shadow
+                cursor-pointer
+                rounded-xl
+                bg-green-400
+                hidden
+                sm:block
+              "
+            >
+              <div class="w-full h-full">
+                <img
+                  src="assets/story-4.jpg"
+                  alt="story-image"
+                  class="h-full w-full"
+                />
+                <div
+                  class="
+                    absolute
+                    top-3
+                    left-3
+                    w-9
+                    h-9
+                    rounded-full
+                    cursor-pointer
+                    ring-4 ring-blue-600
+                  "
+                >
+                  <img
+                    src="assets/story-p-4.jpg"
+                    alt="profile-image"
+                    class="rounded-full"
+                  />
+                </div>
+                <div
+                  class="
+                    absolute
+                    bottom-1
+                    left-2
+                    text-white text-sm
+                    sm:text-base
+                    font-semibold
+                  "
+                >
+                  <span>Asif Khan Zisan</span>
+                </div>
+              </div>
+            </div>
+            <!-- left-arrow -->
+            <div
+              class="
+                absolute
+                w-8
+                h-8
+                p-2
+                rounded-full
+                bg-white
+                -right-4
+                cursor-pointer
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 text-gray-600"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="3"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <!-- post section -->
+          <div class="w-full sm:w-3/5 xl:w-3/4 mt-8 shadow rounded-lg bg-white">
+            <div class="p-4 flex space-x-4">
+              <img
+                src="assets/mh.jpg"
+                alt="profile-picture"
+                class="w-10 h-10 rounded-full object-cover"
+              />
+              <input
+                type="text"
+                placeholder="Whats on your, mind?"
+                class="
+                  w-full
+                  px-3
+                  outline-none
+                  bg-gray-200
+                  focus:bg-gray-300
+                  text-gray-600
+                  rounded-full
+                "
+              />
+            </div>
+            <hr class="mx-4" />
+            <div class="flex items-center justify-center py-2">
+              <a
+                href="#"
+                class="
+                  flex flex-wrap
+                  items-center
+                  justify-center
+                  space-x-2
+                  px-1
+                  sm:px-3
+                  py-1
+                  hover:bg-gray-200
+                  rounded-lg
+                  font-semibold
+                  text-red-600
+                "
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-7 w-7"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+                  />
+                </svg>
+                <span>Live video</span>
+              </a>
+              <a
+                href="#"
+                class="
+                  flex flex-wrap
+                  items-center
+                  justify-center
+                  space-x-2
+                  px-2
+                  sm:px-3
+                  py-1
+                  hover:bg-gray-200
+                  rounded-lg
+                  font-semibold
+                  text-green-600
+                "
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-7 w-7"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                  />
+                </svg>
+                <span>Photo/video</span>
+              </a>
+              <a
+                href="#"
+                class="
+                  flex flex-wrap
+                  items-center
+                  justify-center
+                  space-x-2
+                  px-2
+                  sm:px-3
+                  py-1
+                  hover:bg-gray-200
+                  rounded-lg
+                  font-semibold
+                  text-yellow-500
+                "
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-7 w-7"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <span>Feeling/activity</span>
+              </a>
+            </div>
+          </div>
+          <!-- post section end -->
+
+          <!-- public-post-#1 -->
+          <div
+            class="
+              w-full
+              sm:w-3/5
+              xl:w-3/4
+              mt-4
+              shadow
+              rounded-lg
+              bg-white
+              py-3
+            "
+          >
+            <div class="flex justify-between px-3">
+              <div class="flex items-center space-x-2">
+                <img
+                  src="assets/start-sports.jpg"
+                  alt="start-sports-logo"
+                  class="w-7 h-7 rounded-full cursor-pointer"
+                />
+                <div class="flex flex-col">
+                  <span
+                    class="text-xl text-gray-900 cursor-pointer hover:underline"
+                    >Star Sports</span
+                  >
+                  <div class="flex items-center space-x-1">
+                    <span
+                      class="
+                        font-semibold
+                        text-gray-600
+                        cursor-pointer
+                        hover:underline
+                        text-sm
+                      "
+                      >2h</span
+                    >
+                    <span
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4 text-gray-700"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <title>Share with public</title>
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 text-gray-500 cursor-pointer"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+            <div class="px-3 mt-2">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Nostrum, beatae adipisicing elit.
+              </p>
+            </div>
+            <span class="font-semibold text-blue-800 ml-4"
+              >#sorrylitondas #sorrymushi
+            </span>
+            <span>😞😒</span>
+            <div class="w-full h-58">
+              <img
+                src="assets/post-img-1.jpg"
+                alt=""
+                class="object-cover w-full h-full"
+              />
+            </div>
+            <div class="mx-3 py-2 border-b border-gray-300">
+              <div class="flex items-center justify-between">
+                <div class="flex flex-wrap items-center text-center">
+                  <span>😄</span>
+                  <span
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 text-blue-600"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="ml-2">You and 2K others</span>
+                </div>
+                <div class="flex items-center space-x-1 text-center">
+                  <span>28 Comments</span>
+                  <span class="text-center">21 Share</span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="
+                flex
+                items-center
+                justify-center
+                border-b border-gray-300
+                mx-3
+                py-1
+              "
+            >
+              <div
+                class="
+                  hover:bg-gray-300
+                  cursor-pointer
+                  flex
+                  items-center
+                  justify-center
+                  w-24
+                  sm:w-32
+                  py-1
+                  rounded-sm
+                  space-x-1
+                  sm:space-x-2
+                "
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 sm:h-7 w-5 sm:w-7 text-blue-600"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z"
+                  />
+                </svg>
+                <span>Like</span>
+              </div>
+              <div
+                class="
+                  hover:bg-gray-300
+                  cursor-pointer
+                  flex
+                  items-center
+                  justify-center
+                  w-24
+                  sm:w-32
+                  py-1
+                  px-1
+                  rounded-sm
+                  space-x-1
+                  sm:space-x-2
+                "
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 sm:h-4 w-5 sm:w-7"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
+                  />
+                </svg>
+                <span>Comment</span>
+              </div>
+              <div
+                class="
+                  hover:bg-gray-300
+                  cursor-pointer
+                  flex
+                  items-center
+                  justify-center
+                  w-24
+                  sm:w-32
+                  py-1
+                  rounded-sm
+                  space-x-1
+                  sm:space-x-2
+                "
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 sm:h-4 w-5 sm:w-7"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"
+                  />
+                </svg>
+                <span>Share</span>
+              </div>
+              <div
+                class="
+                  hover:bg-gray-300
+                  cursor-pointer
+                  flex
+                  items-center
+                  justify-center
+                  px-1
+                  py-1
+                  rounded-sm
+                  space-x-1
+                  sm:space-x-2
+                "
+              >
+                <img
+                  src="assets/mh.jpg"
+                  alt="profile-picture"
+                  class="w-5 h-5 rounded-full object-cover cursor-pointer"
+                />
+                <svg
+                  viewBox="0 0 20 20"
+                  width="1em"
+                  height="1em"
+                  class="
+                    a8c37x1j
+                    ms05siws
+                    hwsy1cff
+                    b7h9ocf4
+                    fzdkajry
+                    jnigpg78
+                    odw8uiq3
+                    h-5
+                    w-5
+                  "
+                >
+                  <path
+                    d="M10 14a1 1 0 0 1-.755-.349L5.329 9.182a1.367 1.367 0 0 1-.205-1.46A1.184 1.184 0 0 1 6.2 7h7.6a1.18 1.18 0 0 1 1.074.721 1.357 1.357 0 0 1-.2 1.457l-3.918 4.473A1 1 0 0 1 10 14z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <!-- public-post-#1 end -->
+        </div>
+      </div>
+      <!-- main-right -->
+      <div
+        class="
+          xl:w-1/5
+          lg:w-1/4 lg:mt-12
+          h-full
+          hidden
+          lg:block
+          px-2
+          pb-4
+          lg:fixed lg:top-0 lg:right-0
+          overflow-auto
+        "
+      >
+        <ul class="flex flex-col overflow-auto pt-5 pb-12">
+          <li class="flex justify-between items-center">
+            <span>Friend requests</span>
+            <a href="#" class="text-blue-600 hover:underline"
+              ><span>See All</span></a
+            >
+          </li>
+          <li class="flex items-center mt-3 space-x-2">
+            <a href="#">
+              <img
+                src="assets/friends-req.jpg"
+                alt=""
+                class="w-10 h-10 xl:w-12 xl:h-12 rounded-full bg-gray-500"
+              />
+            </a>
+            <div class="flex flex-col space-y-2">
+              <div class="flex justify-between items-center">
+                <a href="#"><span>Muntaha Himu</span></a>
+                <span class="text-gray-700 text-sm">4d</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <button
+                  class="bg-blue-600 text-gray-200 px-4 xl:px-4 py-1 rounded-md"
+                >
+                  Confirm
+                </button>
+                <button
+                  class="bg bg-white text-gray-700 px-5 xl:px-5 py-1 rounded-md"
+                >
+                  Delet
+                </button>
+              </div>
+            </div>
+          </li>
+          <hr class="mt-5 mb-2" />
+          <li class="flex justify-between items-center">
+            <span>Contacts</span>
+            <div class="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 text-gray-600 cursor-pointer"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 text-gray-600 cursor-pointer"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"
+                />
+              </svg>
+            </div>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-1.jpg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>Farhan Khan</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-2.jpg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>Arman Hossain</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-3.jpg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>P I A S</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-4.jpg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>Sanjid Rahman</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-6.jpg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>Ariyan Rohman Afif</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-7.jpg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>JS Jahid</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-8.jpg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>Khaled Shahriar</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-9.jpg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>Maher Forhad</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-10.jpg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>Ahad Hosain Oni</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-11.jpg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>Biplob Das</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-12.jpg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>Aklina Khanom</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-5.jpg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>Imran Sharabon</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/story-3.jpg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>Muntaha Himu</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-13.jpg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>Juwel Rana</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-14.jpg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>Fuhad Pritom</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-15.jpg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>Habib Tipu</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-16.jpeg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>John Doe</span>
+          </li>
+          <hr class="mx-2 mt-3 mb-3" />
+          <li
+            class="
+              flex
+              items-center
+              gap-2
+              p-2
+              cursor-pointer
+              rounded-md
+              hover:bg-gray-200
+            "
+          >
+            <div class="relative">
+              <img
+                src="assets/active-17.jpg"
+                alt="profile-picture"
+                class="w-7 h-7 rounded-full"
+              />
+              <div
+                class="
+                  absolute
+                  bottom-0
+                  right-0
+                  w-3
+                  h-3
+                  rounded-full
+                  bg-green-400
+                  border-2 border-white
+                "
+              ></div>
+            </div>
+            <span>JavaScript All You Need to Know</span>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="
+                flex
+                items-center
+                gap-2
+                p-2
+                cursor-pointer
+                rounded-md
+                hover:bg-gray-200
+              "
+            >
+              <div class="rounded-full bg-gray-300 p-1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 text-gray-600"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 4v16m8-8H4"
+                  />
+                </svg>
+              </div>
+              <span class="font-semibold text-gray-800">Create New Group</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- main-end -->
+  </body>
+</html>
